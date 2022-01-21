@@ -1,4 +1,4 @@
-# Forschungsprojekt IDENTIFICATION OF IBD-BLOCKS!
+# Forschungsprojekt: identification of IBD-blocks
 
 ## Samples
 
