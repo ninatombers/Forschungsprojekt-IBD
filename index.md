@@ -1222,6 +1222,7 @@ truffle  \
 ### Phasing
 Phasing was done with [ShapeIt2](https://mathgen.stats.ox.ac.uk/genetics_software/shapeit/shapeit.html) by using this code:
 <details><summary markdown="span">CODE</summary>
+	
 ```
 #  ShapeIt2.sh -- read aware phasing
 #citation: O. Delaneau, B. Howie, A. Cox, J-F. Zagury, J. Marchini (2013) Haplotype estimation using sequence reads. American Journal of Human Genetics 93 (4) 787-696
@@ -1331,28 +1332,16 @@ shapeit -convert \
         --output-vcf /gss/work/abal8898/IBD/phasing/outputs/4_Phased/HapTyData-LG"$i".vcf 
 
    bgzip /gss/work/abal8898/IBD/phasing/outputs/4_Phased/HapTyData-LG"$i".vcf 
-
---------------------------------------------------------------------------------
-##5.    Merge LGs back together
-
-#!/bin/bash
-#SBATCH --job-name=5_merge
-#SBATCH --partition=carl.p
-#SBATCH --output=5_merge_%j.out
-#SBATCH --error=5_merge_%j.err
-#SBATCH --mail-type=END,FAIL
-#SBATCH --mail-user=nina.tombers@bluewin.ch
-
-ml VCFtools/0.1.14
-
-  vcf-concat \
-           /gss/work/abal8898/IBD/phasing/outputs/4_Phased/HapTyData-LG*.vcf.gz | \
-grep -v ^\$ | \
-tee phased.vcf | \
-   bgzip phased.vcf
- tabix -p vcf phased.vcf.gz
 ```
 </details>
 <br/>
 	
 ### IBD Identification
+For the [Templated Positional Burrows-Wheeler Transform](https://github.com/23andMe/phasedibd) the output from the phasing was put in for each chromosome (LG) individually, so this Code had to be done for LG01-LG24.
+```
+import phasedibd as ibd
+haplotypes = ibd.VcfHaplotypeAlignment('/gss/work/abal8898/IBD/phasing/outputs/4_Phased/HapTyData-LG01.vcf')
+tpbwt = ibd.TPBWTAnalysis(template=[[1]])
+ibd_segs = tpbwt.compute_ibd(haplotypes, L_f=0.15, segments_out_path='/gss/work/abal8898/IBD/phasedIBD/300_0.15‘)
+```
+	
