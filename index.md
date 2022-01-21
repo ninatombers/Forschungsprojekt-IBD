@@ -1201,7 +1201,7 @@ fi
 From the output data then `filterd.allBP.vcf.gz` was further used for analysis.
 
 ## TRUFFLE
-
+This output was then put into the [TRUFFLE software](https://adimitromanolakis.github.io/truffle-website/index.html):
 ```
 truffle  \
 --vcf filterd_bi-allelic.vcf.gz \
