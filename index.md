@@ -1221,6 +1221,7 @@ truffle  \
 ## Templated Positional Burrows Wheeler Transformation
 ### Phasing
 Phasing was done with [ShapeIt2](https://mathgen.stats.ox.ac.uk/genetics_software/shapeit/shapeit.html) by using this code:
+<details><summary markdown="span">CODE</summary>
 ```
 #  ShapeIt2.sh -- read aware phasing
 #citation: O. Delaneau, B. Howie, A. Cox, J-F. Zagury, J. Marchini (2013) Haplotype estimation using sequence reads. American Journal of Human Genetics 93 (4) 787-696
@@ -1351,5 +1352,7 @@ tee phased.vcf | \
    bgzip phased.vcf
  tabix -p vcf phased.vcf.gz
 ```
-
+</details>
+<br/>
+	
 ### IBD Identification
