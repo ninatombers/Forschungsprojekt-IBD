@@ -3,7 +3,8 @@
 ## Samples
 
 ## Genotyping
-To genotype the data following script was used: </summary>
+As a first step the sequenced data was genotyped.
+<details><summary markdown="span">Script</summary>
 
 ```
 #!/bin/bash
@@ -1199,7 +1200,8 @@ fi
 # rm -r $BASE_DIR/outputs/lof/
 
 ```
-
+</details>
+<br/>
 	
 From the output data then `filterd.allBP.vcf.gz` was further used for analysis.
 
