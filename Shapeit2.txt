@@ -109,23 +109,3 @@ shapeit -convert \
 
    bgzip /gss/work/abal8898/IBD/phasing/outputs/4_Phased/HapTyData-LG"$i".vcf 
 
---------------------------------------------------------------------------------
-##5.    Merge LGs back together
-
-#!/bin/bash
-#SBATCH --job-name=5_merge
-#SBATCH --partition=carl.p
-#SBATCH --output=5_merge_%j.out
-#SBATCH --error=5_merge_%j.err
-#SBATCH --mail-type=END,FAIL
-#SBATCH --mail-user=nina.tombers@bluewin.ch
-
-ml VCFtools/0.1.14
-
-  vcf-concat \
-           /gss/work/abal8898/IBD/phasing/outputs/4_Phased/HapTyData-LG*.vcf.gz | \
-grep -v ^\$ | \
-tee phased.vcf | \
-   bgzip phased.vcf
- tabix -p vcf phased.vcf.gz
-
