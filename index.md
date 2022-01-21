@@ -3,7 +3,8 @@
 ## Samples
 
 ## Genotyping
-<details><summary> To genotype the data following script was used: </summary>
+To genotype the data following script was used: </summary>
+
 ```
 #!/bin/bash
 # by: Floriane Coulmance: 01/04/2020 adjusted by Nina Tombers 2021
@@ -1198,13 +1199,13 @@ fi
 # rm -r $BASE_DIR/outputs/lof/
 
 ```
-</details>
+
 	
 From the output data then `filterd.allBP.vcf.gz` was further used for analysis.
 
 ## TRUFFLE
 ### IBD Identification
-<details><summary> This output was then put into [TRUFFLE](https://adimitromanolakis.github.io/truffle-website/index.html):</summary>
+This output was then put into [TRUFFLE](https://adimitromanolakis.github.io/truffle-website/index.html):
 ```
 truffle  \
 --vcf filterd_bi-allelic.vcf.gz \
@@ -1214,7 +1215,6 @@ truffle  \
 --segments \
 --nofiltering
 ```
-</details>
 	
 ## Templated Positional Burrows Wheeler Transformation
 ### Phasing
