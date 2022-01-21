@@ -4,7 +4,7 @@
 
 ## Genotyping
 As a first step the sequenced data was genotyped.
-<details><summary markdown="span">Script</summary>
+<details><summary markdown="span">Click here for Script</summary>
 
 ```
 #!/bin/bash
