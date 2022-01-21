@@ -1201,6 +1201,16 @@ fi
 From the output data then `filterd.allBP.vcf.gz` was further used for analysis.
 
 ## TRUFFLE
+
+```
+truffle  \
+--vcf filterd_bi-allelic.vcf.gz \
+--ibs1markers 1000 \
+--ibs2markers 500 \
+--out truffle_1k_0.5k_nofilt \
+--segments \
+--nofiltering
+```
 ### IBD Identification
 
 ## Templated Positional Burrows Wheeler Transformation
