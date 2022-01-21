@@ -3,6 +3,7 @@
 ## Samples
 
 ## Genotyping
+To genotype the data following script was used: 
 ```
 #!/bin/bash
 # by: Floriane Coulmance: 01/04/2020 adjusted by Nina Tombers 2021
@@ -1197,6 +1198,8 @@ fi
 # rm -r $BASE_DIR/outputs/lof/
 
 ```
+From the output data then `filterd.allBP.vcf.gz` was further used for analysis.
+
 ## TRUFFLE
 ### IBD Identification
 
