@@ -1207,7 +1207,7 @@ From the output data then `filterd.allBP.vcf.gz` was further used for analysis.
 
 ## TRUFFLE
 ### IBD Identification
-This output was then put into [TRUFFLE](https://adimitromanolakis.github.io/truffle-website/index.html):
+This genotyped data was then put into [TRUFFLE](https://adimitromanolakis.github.io/truffle-website/index.html):
 ```
 truffle  \
 --vcf filterd_bi-allelic.vcf.gz \
@@ -1217,7 +1217,7 @@ truffle  \
 --segments \
 --nofiltering
 ```
-The output can be found in the file `truffle_1k_0.5k_nofilt.csv` in this repository.
+The output with the listed segments can be found in `truffle_1k_0.5k_nofilt.segments.zip` in this repository and `truffle_1k_0.5k_nofilt.ibd` is the output for the estimation of the porportion of IBD1 and IBD2 for every pair of a study.
 	
 ## Templated Positional Burrows Wheeler Transformation
 ### Phasing
