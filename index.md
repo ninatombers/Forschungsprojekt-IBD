@@ -1217,7 +1217,7 @@ truffle  \
 --segments \
 --nofiltering
 ```
-The output can be found in the data `truffle_1k_0.5k_nofilt.csv` in this repository.
+The output can be found in the file `truffle_1k_0.5k_nofilt.csv` in this repository.
 	
 ## Templated Positional Burrows Wheeler Transformation
 ### Phasing
