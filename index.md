@@ -1345,4 +1345,4 @@ haplotypes = ibd.VcfHaplotypeAlignment('/gss/work/abal8898/IBD/phasing/outputs/4
 tpbwt = ibd.TPBWTAnalysis(template=[[1]])
 ibd_segs = tpbwt.compute_ibd(haplotypes, L_f=0.15, segments_out_path='/gss/work/abal8898/IBD/phasedIBD/300_0.15‘)
 ```
-	
+The output for each LG was then merged to one file, which can be found under ... in this repository. 	
